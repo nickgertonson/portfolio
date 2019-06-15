@@ -478,6 +478,14 @@ p {
   }
 }
 
+@media all and (max-width: 800px) {
+  .section-research-portal .bg {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 11;
+    grid-area: 1/1/12/-1;
+  }
+}
+
 .section-research-portal .section-title {
   color: #401F68;
   -ms-grid-row: 3;
@@ -504,9 +512,9 @@ p {
   .section-research-portal .section-title {
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 10;
-    grid-area: 3/3/4/span 10;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 12;
+    grid-area: 3/2/4/span 12;
   }
 }
 
@@ -550,9 +558,9 @@ p {
   .section-research-portal .project-description {
     -ms-grid-row: 4;
     -ms-grid-row-span: 1;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 10;
-    grid-area: 4/3/5/span 10;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 12;
+    grid-area: 4/2/5/span 12;
   }
 }
 
@@ -623,9 +631,9 @@ p {
   .section-research-portal .btn {
     -ms-grid-row: 5;
     -ms-grid-row-span: 1;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 10;
-    grid-area: 5/3/6/span 10;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 12;
+    grid-area: 5/2/6/span 12;
   }
 }
 
@@ -637,7 +645,9 @@ p {
   -ms-grid-column: 3;
   -ms-grid-column-span: 5;
   grid-area: 3/3/7/span 5;
-  width: 80%;
+  -webkit-transform: translateY(-20%) translateX(-5%);
+          transform: translateY(-20%) translateX(-5%);
+  width: 90%;
 }
 
 @media all and (max-width: 1100px) {
@@ -666,11 +676,10 @@ p {
 
 @media all and (max-width: 500px) {
   .section-research-portal .rp1 {
+    width: 95%;
     -ms-grid-row: 7;
     -ms-grid-row-span: 1;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 10;
-    grid-area: 7/3/8/span 10;
+    grid-area: 7/1/8/-1;
   }
 }
 
@@ -682,7 +691,9 @@ p {
   -ms-grid-column: 3;
   -ms-grid-column-span: 5;
   grid-area: 3/3/7/span 5;
-  width: 80%;
+  -webkit-transform: translateY(30%) translateX(10%);
+          transform: translateY(30%) translateX(10%);
+  width: 90%;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
@@ -715,11 +726,8 @@ p {
   .section-research-portal .rp2 {
     -ms-grid-row: 8;
     -ms-grid-row-span: 1;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 10;
-    grid-area: 8/3/9/span 10;
-    -webkit-transform: translateY(0%) translateX(0%);
-            transform: translateY(0%) translateX(0%);
+    grid-area: 8/1/9/-1;
+    width: 95%;
   }
 }
 
