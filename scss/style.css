@@ -335,7 +335,19 @@ p {
 .section-pol {
   background-color: #D8EFFB;
   padding-top: 2%;
-  padding-bottom: 5%;
+  padding-bottom: 6%;
+}
+
+@media all and (min-width: 1500px) {
+  .section-pol {
+    margin-top: 8%;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .section-pol {
+    padding-top: 0;
+  }
 }
 
 .section-pol .section-title {
@@ -546,6 +558,12 @@ p {
   padding-bottom: 5%;
 }
 
+@media all and (min-width: 1400px) {
+  .section-research-portal {
+    margin-top: 13%;
+  }
+}
+
 .section-research-portal .bg {
   width: 100%;
   z-index: 1;
@@ -616,6 +634,7 @@ p {
     -ms-grid-column: 2;
     -ms-grid-column-span: 12;
     grid-area: 3/2/4/span 12;
+    padding-top: 20px;
   }
 }
 
@@ -840,12 +859,20 @@ p {
     -ms-grid-column-span: 12;
     grid-area: 8/2/9/span 12;
     width: 100%;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
 }
 
 .section-tq {
-  padding: 0% 0% 5% 0%;
+  padding: 2% 0% 5% 0%;
   background-color: #002A52;
+}
+
+@media all and (min-width: 1300px) {
+  .section-tq {
+    padding-top: 5%;
+  }
 }
 
 .section-tq .section-title {
@@ -1132,6 +1159,12 @@ p {
   padding-top: 5%;
 }
 
+@media all and (min-width: 1300px) {
+  .section-mdj {
+    margin: 15% 0px;
+  }
+}
+
 .section-mdj .logo {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
@@ -1320,8 +1353,6 @@ p {
 }
 
 .clapper {
-  widows: 100%;
-  margin: 25% 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1343,11 +1374,18 @@ p {
 .section-footer {
   background-color: #D8EFFB;
   margin: 30% 0px 0px 0px;
+  padding-top: 20px;
 }
 
 @media all and (max-width: 900px) {
   .section-footer {
     margin: 35% 0px 0px 0px;
+  }
+}
+
+@media all and (min-width: 1300px) {
+  .section-footer {
+    margin: 15% 0px 0px 0px;
   }
 }
 

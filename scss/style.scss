@@ -277,8 +277,13 @@ p {
 .section-pol {
     background-color: $lightblue;
     padding-top: 2%;
-    padding-bottom: 5%;
-
+    padding-bottom: 6%;
+    @media all and (min-width: 1500px){
+        margin-top: 8%;
+    }
+    @media all and (max-width: 800px){
+        padding-top: 0;
+    }
     .section-title {
         grid-area: 2/3/3/span 3;
 
@@ -394,6 +399,9 @@ p {
     z-index: 10;
     padding-top: 4%;
     padding-bottom: 5%;
+    @media all and (min-width: 1400px){
+        margin-top: 13%;
+    }
     .bg {
         width: 100%;
         z-index: 1;
@@ -431,6 +439,7 @@ p {
 
         @media all and (max-width: 800px) {
             grid-area: 3/2/4/span 12;
+            padding-top: 20px;
         }
     }
 
@@ -529,14 +538,18 @@ p {
         @media all and (max-width: 500px) {
             grid-area: 8/2/9/span 12;
             width: 100%;
+            transform: translateY(-10px);
         }
     }
 }
 
 // Section Triquarterly
 .section-tq {
-    padding: 0% 0% 5% 0%;
+    padding: 2% 0% 5% 0%;
     background-color: $darkblue;
+    @media all and (min-width: 1300px){
+        padding-top: 5%;
+    }
     .section-title {
         grid-area: 2/3/3/span 3;
         color: white;
@@ -707,6 +720,9 @@ p {
 .section-mdj {
     background-repeat: none;
     padding-top: 5%;
+    @media all and (min-width: 1300px){
+        margin: 15% 0px;
+    }
     .logo {
         grid-area: 1/10/2/span 3;
         width: 70%;
@@ -804,12 +820,9 @@ p {
 // Clapper Thanks
 
 .clapper {
-    widows: 100%;
-    margin: 25% 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
     .hands{
         display: block;
         max-width: 150px;
@@ -821,8 +834,12 @@ p {
 .section-footer {
     background-color: $lightblue;
     margin: 30% 0px 0px 0px;
+    padding-top: 20px;
     @media all and (max-width: 900px){
         margin: 35% 0px 0px 0px;
+    }
+    @media all and (min-width: 1300px){
+        margin: 15% 0px 0px 0px;
     }
     //No Bottom SVG Curve
     &:after {
