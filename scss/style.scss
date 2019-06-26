@@ -1,3 +1,5 @@
+@import 'clapper';
+
 body {
     margin: 0;
     font-size: 14px;
@@ -160,6 +162,8 @@ p {
         overflow: hidden;
         border-radius: 100%;
         justify-self: center;
+        transform: scale(.8);
+
         img {
             max-width: 200px;
             display: block;
@@ -273,11 +277,14 @@ p {
     }
 }
 
+
 // Section - Poetry Out Loud
 .section-pol {
     background-color: $lightblue;
     padding-top: 2%;
     padding-bottom: 6%;
+    box-sizing: content-box;
+
     @media all and (min-width: 1500px){
         margin-top: 8%;
     }
@@ -350,14 +357,6 @@ p {
         background-image: url("../img/pol-home-full.jpg");
         background-repeat: no-repeat;
         background-position-y: -2%;
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-        0 10px 10px rgba(0, 0, 0, 0.22);
-        transition: background-position-y 10s cubic-bezier(.25, .8, .25, 1);
-
-        &:hover {
-            background-position-y: 100%;
-        }
-
         img {
             width: 100%;
             display: block;
@@ -365,7 +364,7 @@ p {
     }
 
     .project-gallery {
-        grid-area: 12/2/13/span 12;
+        grid-area: 8/2/9/span 12;
         width: 100%;
 
         @media all and (max-width: 1100px) {
@@ -389,6 +388,7 @@ p {
                 display: block;
                 width: 100%;
                 height: auto;
+                transform-origin: center;
             }
         }
     }
