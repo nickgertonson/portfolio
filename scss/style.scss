@@ -165,10 +165,6 @@ p {
         transform: scale(.8) translateY(0);
         transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 
-        &:hover{
-            // transform: scale(1) !important;
-        }
-
         img {
             max-width: 200px;
             display: block;
@@ -204,13 +200,11 @@ p {
 
         .btn{
             width: 100%;
-            margin: 0px 0px 0px 10px;
-            
+            margin: 0px 0px 0px 10px;   
             &:first-of-type{
                 margin: 0px 10px 0px 0px;
             }
         }
-
     }
 }
 
