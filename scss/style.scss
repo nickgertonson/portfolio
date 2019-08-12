@@ -162,14 +162,15 @@ p {
 // Sections - Introduction
 .section-introduction {
     .avatar {
+        opacity: 0;
         grid-column: 2 / span 12;
         overflow: hidden;
         border-radius: 100%;
         justify-self: center;
-        transform: scale(.8) translateY(0);
+        transform: scale(.7) translateY(0);
         transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 
-        img {
+        img {       
             max-width: 200px;
             display: block;
             width: 100%;
@@ -177,11 +178,13 @@ p {
     }
 
     .name {
+        opacity: 0;
         grid-column: 2 / span 12;
         text-align: center;
     }
 
     .bio {
+        opacity: 0;
         grid-column: 5 / span 6;
         text-align: center;
 
@@ -190,6 +193,7 @@ p {
         }
     }
     .intro-nav{
+        opacity: 0;
         grid-area: 5/6/6/ span 4;
         display: flex;
         justify-content: center;
@@ -213,6 +217,9 @@ p {
 }
 
 // Section - Toolset
+#toolset{
+    opacity: 0;
+}
 .section-toolset {
     background-color: $lightgray;
     padding-bottom: 40px;
@@ -244,6 +251,7 @@ p {
         }
 
         .tool-item {
+            opacity: 0;
             width: 100%;
             transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
             // transform: sca;
@@ -261,6 +269,7 @@ p {
 }
 
 .scroll-icon{
+    opacity: 0;
     grid-area: 6/6/7/ span 4;
     justify-content: center;
     width: 30px;
@@ -764,6 +773,8 @@ p {
 
 // Section My Damn Jam
 .section-mdj {
+    overflow: hidden;
+    width: 100%;
     .deco{
         position: absolute;
         display: block;

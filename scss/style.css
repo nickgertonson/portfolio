@@ -270,6 +270,7 @@ p {
 }
 
 .section-introduction .avatar {
+  opacity: 0;
   -ms-grid-column: 2;
   -ms-grid-column-span: 12;
   grid-column: 2 / span 12;
@@ -277,8 +278,8 @@ p {
   border-radius: 100%;
   -ms-grid-column-align: center;
       justify-self: center;
-  -webkit-transform: scale(0.8) translateY(0);
-          transform: scale(0.8) translateY(0);
+  -webkit-transform: scale(0.7) translateY(0);
+          transform: scale(0.7) translateY(0);
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -290,6 +291,7 @@ p {
 }
 
 .section-introduction .name {
+  opacity: 0;
   -ms-grid-column: 2;
   -ms-grid-column-span: 12;
   grid-column: 2 / span 12;
@@ -297,6 +299,7 @@ p {
 }
 
 .section-introduction .bio {
+  opacity: 0;
   -ms-grid-column: 5;
   -ms-grid-column-span: 6;
   grid-column: 5 / span 6;
@@ -312,6 +315,7 @@ p {
 }
 
 .section-introduction .intro-nav {
+  opacity: 0;
   -ms-grid-row: 5;
   -ms-grid-row-span: 1;
   -ms-grid-column: 6;
@@ -352,6 +356,10 @@ p {
 
 .section-introduction .intro-nav .btn:first-of-type {
   margin: 0px 10px 0px 0px;
+}
+
+#toolset {
+  opacity: 0;
 }
 
 .section-toolset {
@@ -416,6 +424,7 @@ p {
 }
 
 .section-toolset .toolset-subgrid .tool-item {
+  opacity: 0;
   width: 100%;
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -448,6 +457,7 @@ p {
 }
 
 .scroll-icon {
+  opacity: 0;
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
   -ms-grid-column: 6;
@@ -1363,6 +1373,8 @@ p {
 }
 
 .section-mdj {
+  overflow: hidden;
+  width: 100%;
   background-repeat: none;
   padding-top: 5%;
 }

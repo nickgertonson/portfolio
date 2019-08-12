@@ -9,23 +9,16 @@ var tl8 = new TimelineMax();
 var tl9 = new TimelineMax();
 var tl10 = new TimelineMax();
 
-
-
-
-
-
-
-
 const controller = new ScrollMagic.Controller();
 
 tl1
-  .from(".avatar", 1, {opacity: 0, scale: .7, ease: Power2.easeInOut})
-  .from(".name", 1, {opacity: 0, scale: 1, ease: Power2.easeInOut}, "=-.5")
-  .from(".bio", 1, {opacity: 0, scale: 1, ease: Power2.easeInOut}, "=-.75")
-  .from(".intro-nav", 1, {opacity: 0, ease: Power2.easeInOut}, "=-1")
-  .from("#toolset", 1, {opacity: 0, y:10, ease: Power1.easeInOut}, "=-.5")
-  .from(".tool-item", 1, {opacity: 0, y:5, ease: Power1.easeInOut}, "-=.4")
-  .from(".scroll-icon", 1, {opacity: 0, ease: Power2.easeInOut}, "=-.5");
+  .to(".avatar", 1, {opacity: 1, scale: .8, ease: Power2.easeInOut})
+  .to(".name", 1, {opacity: 1, scale: 1, ease: Power2.easeInOut}, "=-.5")
+  .to(".bio", 1, {opacity: 1, scale: 1, ease: Power2.easeInOut}, "=-.75")
+  .to(".intro-nav", 1, {opacity: 1, ease: Power2.easeInOut}, "=-1")
+  .to("#toolset", 1, {opacity: 1, y:10, ease: Power1.easeInOut}, "=-.5")
+  .to(".tool-item", 1, {opacity: 1, y:5, ease: Power1.easeInOut}, "-=.4")
+  .to(".scroll-icon", 1, {opacity: 1, ease: Power2.easeInOut}, "=-.5");
 
 tl2
   .from("#welcome", 1, {opacity: 0, ease: Power3.easeInOut});
@@ -86,7 +79,7 @@ const scene2 = new ScrollMagic.Scene({
 
 const scene3 = new ScrollMagic.Scene({
   triggerElement: "#poetry-out-loud",
-  triggerHook: .8
+  triggerHook: .9
   // offset: 200
 })
   .setTween(tl3)
@@ -152,6 +145,3 @@ function updatePercentage(){
   tl.progress();
   console.log(tl.progress());
 }
-
-
-
