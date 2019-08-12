@@ -221,6 +221,10 @@ p {
   padding: 100px 0px;
 }
 
+.pad-y-m {
+  padding: 50px 0px;
+}
+
 .mar-y-l {
   margin: 20% 0px;
 }
@@ -415,6 +419,77 @@ p {
   width: 100%;
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Standard syntax */
+@-webkit-keyframes chevron-throb {
+  0% {
+    opacity: .4;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes chevron-throb {
+  0% {
+    opacity: .4;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.scroll-icon {
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 4;
+  grid-area: 6/6/7/ span 4;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  margin-top: 50px;
+  z-index: 100;
+}
+
+.scroll-icon svg {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0px;
+  -webkit-animation-name: chevron-throb;
+          animation-name: chevron-throb;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.scroll-icon svg .cls-1 {
+  stroke: #0597E5 !important;
+}
+
+.scroll-icon #chev_2 {
+  top: -5px;
+}
+
+.section-welcome {
+  padding-top: 60px;
 }
 
 .section-welcome .welcome-text {
@@ -774,7 +849,7 @@ p {
   grid-area: 4/9/5/span 4;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-right: 20px;
+  padding-right: 40px;
 }
 
 @media all and (max-width: 1100px) {
@@ -792,7 +867,7 @@ p {
   z-index: 10;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-right: 20px;
+  padding-right: 40px;
 }
 
 @media all and (max-width: 1100px) {
@@ -816,7 +891,7 @@ p {
 }
 
 .section-research-portal .btn {
-  width: calc(100% - 20px);
+  width: calc(100% - 40px);
   z-index: 10;
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
@@ -900,6 +975,8 @@ p {
   -webkit-transform: translateY(-20%) translateX(-5%);
           transform: translateY(-20%) translateX(-5%);
   width: 90%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
 @media all and (max-width: 1100px) {
@@ -945,19 +1022,21 @@ p {
   -ms-grid-column: 3;
   -ms-grid-column-span: 5;
   grid-area: 3/3/7/span 5;
-  -webkit-transform: translateY(30%) translateX(10%);
-          transform: translateY(30%) translateX(10%);
+  -webkit-transform: translateY(30%) translateX(8%);
+          transform: translateY(30%) translateX(8%);
   width: 90%;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
 }
 
 @media all and (max-width: 1100px) {
   .section-research-portal .rp2 {
     position: relative;
     width: 100%;
-    -webkit-transform: translateY(10%) translateX(0%);
-            transform: translateY(10%) translateX(0%);
+    -webkit-transform: translateY(10%) translateX(-2%);
+            transform: translateY(10%) translateX(-2%);
     -ms-grid-row: 7;
     -ms-grid-row-span: 1;
     -ms-grid-column: 7;
@@ -984,8 +1063,8 @@ p {
     -ms-grid-column-span: 12;
     grid-area: 8/2/9/span 12;
     width: 100%;
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
   }
 }
 
@@ -1605,11 +1684,6 @@ p {
   width: 100%;
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.section-footer .toolset-subgrid .tool-item:hover {
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
 }
 
 .section-footer .copy {
