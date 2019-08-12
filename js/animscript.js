@@ -4,6 +4,15 @@ var tl3 = new TimelineMax();
 var tl4 = new TimelineMax();
 var tl5 = new TimelineMax();
 var tl6 = new TimelineMax();
+var tl7 = new TimelineMax({onUpdate:updatePercentage});
+var tl8 = new TimelineMax();
+var tl9 = new TimelineMax();
+var tl10 = new TimelineMax();
+
+
+
+
+
 
 
 
@@ -15,7 +24,7 @@ tl1
   .from(".bio", 1, {opacity: 0, scale: 1, ease: Power2.easeInOut}, "=-.75")
   .from(".intro-nav", 1, {opacity: 0, ease: Power2.easeInOut}, "=-1")
   .from("#toolset", 1, {opacity: 0, y:10, ease: Power1.easeInOut}, "=-.5")
-  .from(".tool-item", 1, {opacity: 0, y:5, ease: Power1.easeInOut}, "-=.35")
+  .from(".tool-item", 1, {opacity: 0, y:5, ease: Power1.easeInOut}, "-=.4")
   .from(".scroll-icon", 1, {opacity: 0, ease: Power2.easeInOut}, "=-.5");
 
 tl2
@@ -35,9 +44,28 @@ tl4
   .from(".pol-6", 1, {y:50, opacity: 0}, "=-.9");
 
 tl5
-.from(".rp1", 2, {marginTop:50, ease: Power4.easeInOut})
-.from(".rp2", 2, {marginTop: -50, ease: Power4.easeInOut}, "=-2")
-.from("#research-portal", 2, {opacity: 0}, "=-1.5");
+.from("#research-portal", 2, {opacity: 0})
+.from(".rp1", 2, {marginTop: 50, marginBottom: -50, ease: Power4.easeInOut}, "=-1")
+.from(".rp2", 2, {marginTop: -50, marginBottom: 50, ease: Power4.easeInOut}, "=-2");
+
+
+tl6
+.from("#triquarterly", 2, {opacity: 0, ease: Power4.easeInOut});
+
+tl7
+.from("#triquarterly .gallery-subgrid .toppy", 10, {xPercent: 5, ease: Sine.easeInOut})
+.from("#triquarterly .gallery-subgrid .botty", 10, {xPercent: -5, ease: Sine.easeInOut}, "=-10");
+
+tl8
+.from("#triquarterly .desktop-gallery", 1, {opacity: 0, y: 30, ease: Power1.easeInOut});
+
+tl9
+.from("#my-damn-jam", 2, {opacity: 0, ease: Power4.easeInOut})
+.from("#my-damn-jam .deco", 2, {scale: .5, rotation: 90, ease: Power1.easeInOut}, "=-1.5");
+
+tl10
+// .call(function() {$('.clappingbutton').addClass("clapping");});
+.set(".clappingbutton", {className:'+=clapping'});
 
 
 
@@ -58,7 +86,8 @@ const scene2 = new ScrollMagic.Scene({
 
 const scene3 = new ScrollMagic.Scene({
   triggerElement: "#poetry-out-loud",
-  triggerHook: .9
+  triggerHook: .8
+  // offset: 200
 })
   .setTween(tl3)
     .addTo(controller);
@@ -73,23 +102,50 @@ const scene4 = new ScrollMagic.Scene({
 
 const scene5 = new ScrollMagic.Scene({
   triggerElement: "#research-portal",
-  triggerHook: 0.7
+  triggerHook: 0.9
   // offset: 500
 })
   .setTween(tl5)
     .addTo(controller);
     
 
-      
-// const scene = new ScrollMagic.Scene({
-//   triggerElement: "#pol-start",
-//   triggerHook: "onLeave" 
-//   duration: "100%"
-// })
-//   .setPin("#pol-start")
-//   .setTween(tl)
-//     .addTo(controller);
+const scene6 = new ScrollMagic.Scene({
+  triggerElement: "#triquarterly",
+  triggerHook: 1,
+  offset: -50
+})
+  .setTween(tl6)
+    .addTo(controller);
+        
+const scene7 = new ScrollMagic.Scene({
+  triggerElement: "#triquarterly",
+  triggerHook: 1,
+  duration: "100%"
+})
+  .setTween(tl7)
+    .addTo(controller);
+       
+const scene8 = new ScrollMagic.Scene({
+  triggerElement: "#triquarterly .desktop-gallery",
+  triggerHook: 1
+})
+  .setTween(tl8)
+    .addTo(controller);
 
+const scene9 = new ScrollMagic.Scene({
+  triggerElement: "#my-damn-jam",
+  triggerHook: 1
+})
+  .setTween(tl9)
+    .addTo(controller);
+
+const scene10 = new ScrollMagic.Scene({
+  triggerElement: ".clapper",
+  triggerHook: .8
+})
+  .setTween(tl10)
+    .addTo(controller);
+    
 
 
 function updatePercentage(){
