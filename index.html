@@ -2,267 +2,55 @@
 <html lang="en">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145160616-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-145160616-1');
-    </script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <meta property="og:image" content="https://www.nickgertonsondesign.com/img/site.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1024">
-    <meta property="og:image:height" content="979">
-
-    <link rel='icon' href='favicon.ico' type='image/x-icon' />
-    <link rel="stylesheet" href="scss/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
-
-    <script src="js/script.js"></script>
-
-    <title>Nick Gertonson</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nick Gertonson</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="scss/style.css">
 </head>
 
 <body>
-    <audio>
-        <source src="/img/blepp.mp3"/>
-        <source src="/img/blepp.ogg"/>
-    </audio>
-
-    <!-- <button id="cta">Button</button> -->
-
-    <section id="introduction" class="grid section-introduction pad-y-m">
-        <div class="avatar">
-            <img src="img/nick-face.jpg" alt="This is a picture of my face!">
+  <main class="stage">
+    <div class="card-scene">
+      <div class="card" id="card">
+        <div class="card-face card-face-back">
+          <div class="card-stats">
+            <h2 class="card-stats-title">Stats</h2>
+            <ul class="card-stats-list">
+              <li>Design Systems</li>
+              <li>UI / UX</li>
+              <li>Component Libraries</li>
+              <li>CSS / SCSS</li>
+              <li>Figma</li>
+              <li>Accessibility</li>
+            </ul>
+            <span class="card-flip-hint">Click to flip back</span>
+          </div>
         </div>
-        <h1 class="name">Nick Gertonson</h1>
-        <div class="bio">
-            <p class="text">I’m a product designer and front-end developer currently based in Brooklyn.
-            </p>
-
+        <div class="card-face card-face-front">
+          <div class="card-glare"></div>
+          <div class="card-photo">
+            <img src="img/nick-face.jpg" alt="Nick Gertonson">
+          </div>
+          <a class="card-link" href="https://www.linkedin.com/in/nickgertonson/" target="_blank" rel="noopener noreferrer" aria-label="Nick Gertonson on LinkedIn" data-no-flip>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <div class="card-info">
+            <h1 class="card-name">Nick Gertonson</h1>
+            <p class="card-role">Design Systems at MLB</p>
+          </div>
+          <span class="card-flip-hint" aria-hidden="true">Click for stats</span>
         </div>
-
-
-
-        <nav class="intro-nav">
-            <a class="btn blue" href="https://www.linkedin.com/in/nickgertonson/">LinkedIn</a>
-            <a class="btn blue" href="docs/2019_Gertonson_Resume.pdf">Resume</a>
-        </nav>
-
-
-    </section>
-
-
-
-
-    <section id="toolset" class="grid section-toolset">
-        <h3 class="section-title">My Toolset</h3>
-        <div class="grid toolset-subgrid">
-            <img class="tool-item a" src="img/Logo-sketch.png" alt="Sketch">
-            <img class="tool-item b" src="img/Logo-pp.png" alt="Protopie">
-            <img class="tool-item c" src="img/Logo-pn.png" alt="Principle">
-
-
-            <img class="tool-item d" src="img/Logo-figma.png" alt="Figma">
-            <img class="tool-item e" src="img/Logo-in.png" alt="InVision">
-            <img class="tool-item f" src="img/Logos-xd.png" alt="Adobe XD">
-            <img class="tool-item g" src="img/Logo-ps.png" alt="Adobe Photoshop">
-            <img class="tool-item h" src="img/Logo-ai.png" alt="Adobe Illustrator">
-            <img class="tool-item i" src="img/Logo-id.png" alt="Adobe InDesign">
-            <img class="tool-item j" src="img/Logo-ae.png" alt="Adobe After Effects">
-            <img class="tool-item k" src="img/Logo-html.png" alt="HTML5">
-            <!-- <img class="tool-item j" src="img/Logo-css.png" alt="CSS3"> -->
-            <img class="tool-item l" src="img/Logo-sass.png" alt="SCSS">
-            <img class="tool-item m" src="img/Logo-js.png" alt="JavaScript">
-            <!-- <img class="tool-item m" src="img/Logo-vue.png" alt="Vue.JS"> -->
-            <img class="tool-item n" src="img/Logo-git.png" alt="GIT">
-            <img class="tool-item o" src="img/Logo-wp.png" alt="Wordpress">
-            <img class="tool-item p" src="img/Logo-gsap.png" alt="Greensock Animation">
-        </div>
-    </section>
-
-    <section>
-        <div class="scroll-icon">
-            <svg id="chev_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.09 9.47"><defs><style>.cls-1{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title>chevron-down</title><polyline class="cls-1 a" points="1.55 1.73 7.55 7.73 13.55 1.73"/></svg>
-            <svg id="chev_2" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.09 9.47"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title>chevron-down</title><polyline class="cls-1 b" points="1.55 1.73 7.55 7.73 13.55 1.73"/></svg>
-        </div>
-    </section>
-
-    <section id="welcome" class="section-welcome grid center-column-grid pad-y-l">
-        <div class="welcome-text">
-            <p class="text"><strong>Scroll down</strong> to check out some of my favorite projects from over the years.
-                <!-- If you’re looking for more, you can always check out my project gallery, where I share a wider collection of work. -->
-            </p>
-
-        </div>
-        <!-- <a class="btn blue" href="https://www.nickgertonson.com/">Full Project Gallery</a> -->
-
-    </section>
-
-    <section id="poetry-out-loud" class="section-pol grid mar-y-s bg-curve-blue">
-        <h2 class="section-title">Poetry Out Loud</h2>
-        <div class="project-description">
-            <p class="sm-text">Poetry Out Loud is a recitation contest organized by the National Endowment for the Arts and Poetry Foundation. Each year, students across the country select and prepare three poems from the Poetry Out Loud catalogue and compete for the title
-                of national champion.</p>
-            <p>I was asked to redesign the contest website for Poetry Out Loud and modernize the design while improving the poem search and discovery feature.
-            </p>
-        </div>
-        <!-- <a class="btn blue" href="https://www.nickgertonson.com/poetry-out-loud/">Poetry Out Loud Case Study</a> -->
-        <div class="project-visual">
-            <img src="img/pol-overlay.png" alt="Poetry Out Loud Homepage">
-        </div>
-        <div class="pol project-gallery">
-            <div class="grid pol gallery-subgrid">
-                <img class="pol-1" src="img/pol-1.jpg" alt="Poetry Out Loud Mobile Home Screen">
-                <img class="pol-2" src="img/pol-2.jpg" alt="Poetry Out Loud Mobile Home Collections">
-                <img class="pol-3" src="img/pol-3.jpg" alt="Poetry Out Loud Mobile Home Search">
-                <img class="pol-4" src="img/pol-4.jpg" alt="Poetry Out Loud Mobile Poems Browser">
-                <img class="pol-5" src="img/pol-5.jpg" alt="Poetry Out Loud Mobile Poets Browser">
-                <img class="pol-6" src="img/pol-6.jpg" alt="Poetry Out Loud Mobile Search Function">
-            </div>
-        </div>
-    </section>
-    <section id="research-portal" class=" grid section-research-portal mar-y-l">
-        <div class="bg"></div>
-        <img class="rpmock" src="img/rp-mock.jpg" alt="The Research Portal as a Mobile App">
-        <h2 class="section-title">Research Portal</h2>
-
-        <div class="project-description">
-            <p class="sm-text">This project is the result of an administrative initiative at Northwestern University to simplify the management of research grant funding. I led the UI design efforts for this custom application built in vue.js on AWS. The app aggregated
-                financial data from several sources and presented fiscal data in responsive and dynamic charts.
-            </p>
-        </div>
-        <!-- <a class="btn blue" href="https://www.nickgertonson.com/research-portal/">Research Portal Case Study</a> -->
-        <img class="rp1" src="img/rp-1.jpg" alt="Research Portal Project Overview">
-        <img class="rp2" src="img/rp-2.jpg" alt="Research Portal User Overview">
-    </section>
-
-    <section id="triquarterly" class="section-tq grid mar-y-s bg-curve-dkblue">
-        <h2 class="section-title">TriQuarterly</h2>
-        <div class="project-description">
-            <p class="sm-text">The TriQuarterly is a literary magazine published at Northwestern University. Just before leaving my position at Northwestern, I led a design process for a new, more mobile friendly version of the website.
-            </p>
-        </div>
-        <!-- <a class="btn blue" href="https://www.nickgertonson.com/triquarterly-2-0/">TriQuarterly Case Study</a> -->
-
-        <div class="mobile-gallery">
-            <div class="gallery-subgrid">
-                <div class="grid toppy">
-                    <img class="top" src="img/tq-m-menu.png" alt="TriQuarterly Mobile - Menu Panel">
-                    <img class="top" src="img/tq-m-featured-poem.png" alt="TriQuarterly Mobile - Featured Poem">
-                    <img class="top" src="img/tq-m-video.png" alt="TriQuarterly Mobile - Featured Videos">
-                    <img class="top" src="img/tq-m-contributors.png" alt="TriQuarterly Mobile - Contributors">
-                </div>
-                <div class="grid botty">
-                    <img class="bot" src="img/tq-m-current.png" alt="TriQuarterly Mobile - Current Issue">
-                    <img class="bot" src="img/tq-m-poem.png" alt="TriQuarterly Mobile - Poem">
-                    <img class="bot" src="img/tq-m-contributor.png" alt="TriQuarterly Mobile - Featured Contributor">
-                    <img class="bot" src="img/tq-m-featured.png" alt="TriQuarterly Mobile - Featured Poem">
-                </div>
-            </div>
-        </div>
-        <div class="desktop-gallery">
-            <div class="grid gallery-subgrid">
-
-                <img class="a" src="img/tq-videoessay.png" alt="TriQuarterly Desktop View - Video Essays">
-                <img class="b" src="img/tq-poem.png" alt="TriQuarterly Desktop View - Poem">
-                <img class="c" src="img/tq-issues.png" alt="TriQuarterly Desktop View - Issue Archive">
-                <img class="d" src="img/tq-contributors.png" alt="TriQuarterly Desktop View - Current Issue">
-            </div>
-        </div>
-    </section>
-
-
-    <section id="my-damn-jam" class="section-mdj grid mar-y-l">
-        <img class="deco blue_swirl" src="img/mdj_blue_swirl.svg" alt="">
-        <img class="deco green_squig" src="img/mdj_green_squig.svg" alt="">
-        <img class="deco red_triangle" src="img/mdj_red_triangle.svg" alt="">
-        <img class="deco yellow_squig" src="img/mdj_yellow_squig.svg" alt="">
-        <img class="deco red_triangle_2" src="img/mdj_red_triangle_2.svg" alt="">
-        <img class="deco green_dot" src="img/mdj_green_dot.svg" alt="">
-        <img class="deco yellow_swirl" src="img/mdj_yellow_swirl.svg" alt="">
-
-
-
-        <img class="logo" src="img/mdj-logo.png" alt="My Damn Jam Logo">
-        <h2 class="section-title">My Damn Jam</h2>
-        <div class="project-description">
-            <p class="sm-text">My Damn Jam is a music appreciation site I put together in my free time. It’s a fun little corner of the internet where my friends and I can share our musical obsessions – our jams.
-            </p>
-        </div>
-        <!-- <a class="btn green" href="https://www.nickgertonson.com/my-damn-jam-designs/">My Damn Jam Case Study</a> -->
-        <div class="desktop-gallery">
-            <div class="grid gallery-subgrid">
-                <img class="mdj-home" src="img/mdj-home.png" alt="My Damn Jam Home Page">
-                <img class="mdj-profile" src="img/mdj-profile.png" alt="My Damn Jam Profile Page">
-                <img class="mdj-single" src="img/mdj-single.png" alt="My Damn Jam Single Song Page">
-            </div>
-        </div>
-    </section>
-
-    <div class="clapper">
-
-        <a class="clappingbutton">
-            <div class="hand bot"></div>
-            <div class="hand top"></div>
-            <div class="homer"></div>
-            <!-- <a class="clap_button"></a> -->
-            <!-- <div class="wp_clap_clear"></div> -->
-        </a>
-
-        <h3>Thanks For Stopping By!</h3>
-
+      </div>
     </div>
+  </main>
 
-
-    <footer class="grid section-footer bg-curve-blue">
-        <nav class="nav-links">
-            <a class="btn blue" href="https://www.linkedin.com/in/nickgertonson/">LinkedIn</a>
-            <a class="btn blue" href="docs/2019_Gertonson_Resume.pdf">Resume</a>
-            <a class="btn blue" href="https://www.nickgertonson.com/">Full Project Gallery</a>
-        </nav>
-
-        <h3 class="section-title">Built With Pride and:</h3>
-
-        <div id="builtwith" class="toolset-subgrid">
-            <img class="tool-item" src="img/Logo-netlify.png" alt="Netlify">
-            <img class="tool-item" src="img/Logos-xd.png" alt="Adobe XD">
-            <img class="tool-item" src="img/Logo-html.png" alt="HTML5">
-            <img class="tool-item" src="img/Logo-css.png" alt="CSS3">
-            <img class="tool-item" src="img/Logo-sass.png" alt="SCSS">
-            <img class="tool-item" src="img/Logo-js.png" alt="JavaScript">
-            <img class="tool-item" src="img/Logo-git.png" alt="GIT">
-            <img class="tool-item" src="img/Logo-gsap.png" alt="Greensock Animation">
-        </div>
-
-
-        <h4 class="copy">© 2019 Nick Gertonson</h4>
-
-
-    </footer>
-
-    <script src="js/animscript.js"></script>
-
-
+  <script src="js/script.js"></script>
 </body>
-
-
-
 
 </html>
