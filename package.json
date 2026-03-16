@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "sass": "sass --watch scss/style.scss:scss/style.css",
+    "serve": "browser-sync start --server --files 'scss/style.css, js/*.js, index.html' --no-notify",
+    "dev": "npm run sass & npm run serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickgertonson/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nickgertonson/portfolio/issues"
+  },
+  "homepage": "https://github.com/nickgertonson/portfolio#readme",
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "sass": "^1.98.0"
+  }
+}
